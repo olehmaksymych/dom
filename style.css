@@ -1,288 +1,232 @@
-:root {
-  --green: #27ae60;
-  --black: #192a56;
-  --light-color: #666;
-  --box-shadow: 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
-}
-
 * {
-  font-family: "Bree", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-decoration: none;
-  outline: none;
-  border: none;
-  transition: all 0.2s linear;
 }
 
-html {
-  font-size: 62.5%;
-  overflow-x: hidden;
-  scroll-padding-top: 5.5rem;
-  scroll-behavior: smooth;
-}
-
-.btn {
-  margin-top: 1rem;
-  display: inline-block;
-  font-size: 1.7rem;
-  color: #fff;
-  background: var(--black);
-  border-radius: 0.5rem;
-  cursor: pointer;
-  padding: 0.8rem 3rem;
-}
-
-.btn:hover {
-  background: var(--green);
-  letter-spacing: 0.1rem;
+body {
+  width: 100%;
+  height: 100%;
 }
 
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: #fff;
-  padding: 1rem 7%;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  z-index: 1000;
-  box-shadow: var(--box-shadow);
+  justify-content: center;
+  align-self: center;
+  font-size: 30px;
 }
 
-header .logo {
-  color: var(--black);
-  font-size: 2.5 rem;
-  font-weight: bolder;
+.content {
+  display: flex;
+  justify-content: space-evenly;
+  height: 96px;
 }
 
-header .logo i {
-  color: var(--green);
-}
-
-header .logo i:hover {
-  transform: rotate(300deg);
-}
-
-header .navbar a {
-  font-size: 1.7rem;
-  border-radius: 0.5rem;
-  padding: 0.5rem 1.5rem;
-  color: var(--light-color);
-}
-
-header .navbar a.active,
-header .navbar a:hover {
-  color: #fff;
-  background: var(--black);
-}
-
-header .navbar a:focus {
-  background-color: var(--green);
-  color: #fff;
-}
-
-header .icons i,
-header .icons a {
-  cursor: pointer;
-  margin-left: 0.5rem;
-  height: 4.5rem;
-  line-height: 4.5rem;
-  width: 4.5rem;
-  text-align: center;
-  font-size: 1.7rem;
-  color: var(--black);
-  border-radius: 50%;
-  background: #eee;
-}
-
-header .icons i:hover,
-header .icons a:hover {
-  color: #fff;
-  background: var(--green);
-  transform: rotate(360deg);
-}
-
-header .icons #menu-bars {
-  display: none;
-}
-
-#search-form {
-  position: fixed;
-  top: -110%;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 1004;
-  background: rgba(0, 0, 0, 0.8);
+.asideBlock {
+  width: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 1rem;
+  flex-direction: column;
 }
 
-#search-form.active {
-  top: 0;
-}
-
-#search-form #search-box {
-  width: 50rem;
-  border-bottom: 0.1rem solid #fff;
-  padding: 1rem 0;
-  color: #fff;
-  font-size: 3rem;
-  text-transform: none;
-  background: none;
-}
-
-#search-form #search-box::placeholder {
-  color: #eee;
-}
-
-#search-form #search-box::-webkit-search-cancel-button {
-  -webkit-appearance: none;
-}
-
-#search-form label {
-  color: #fff;
+.asideBtn {
+  width: 200px;
+  height: 50px;
+  border: 1px solid black;
+  background-color: gainsboro;
   cursor: pointer;
-  font-size: 3rem;
+  border-radius: 5px;
 }
 
-#search-form label:hover {
-  color: var(--green);
+.asideBtn:hover {
+  background-color: rgb(25, 49, 49);
+  border: 1px solid rgb(119, 119, 122);
 }
 
-#search-form #close {
-  position: absolute;
-  color: #fff;
-  cursor: pointer;
-  top: 2rem;
-  right: 3rem;
-  font-size: 5rem;
+.mainBlock {
+  display: flex;
+  align-items: center;
+  min-width: 300px;
+  border: 1px solid black;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgb(134, 76, 243);
 }
 
-.section_item {
-  margin-top: 65px;
-  background: #eee;
-  padding: 2rem 9%;
-  display: none;
+.mainHeader {
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  margin-top: 30px;
+  text-shadow: -2px 0px 10px rgba(6, 78, 22, 0.39);
 }
 
-.section_item1 {
-  display: block;
-  color: #3c6be2;
+.mainContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 80px;
+  align-items: center;
 }
 
-.section_description {
-  text-align: center;
-  padding: 15px;
-  margin-top: 65px;
-  background: #eee;
-  padding: 2rem 9%;
-  color: #192a56;
+.mainImg {
+  width: 190px;
+  height: 210px;
+  border: 0.5px;
+  border-radius: 3px;
 }
 
-.picture_description {
-  width: 170px;
-  height: 200px;
-  border-radius: 2px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.mainDescr {
+  border: 1px solid rgb(81, 88, 81);
+  width: 300px;
+  word-break: keep-all;
+  margin-right: 40px;
 }
 
-.short_icon{
-    width:10px;
-    height:10px;
+.mainSource {
+  width: 100%;
 }
 
-.paragraph_description {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: large;
-  text-align: center;
-  padding: 20px;
-  line-height: 25px;
-  color: #27ae60;
+.mainDescrUl {
+  margin: 0 25px;
+  padding-left: 20px;
 }
 
-.club_description {
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: large;
-  text-align: center;
-  padding: 20px;
-  line-height: 25px;
-  font-weight: bold;
-  transition: all 0.2s linear;
-  color: #192a56;
+.mainDescrLi {
+  padding: 5px 0;
+  list-style: none;
 }
 
-.home_div {
-  font-size: 17px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  text-align: center;
+.clicked {
+  background-color: rgb(11, 109, 33);
 }
 
-.home_ul {
-  padding-bottom: 15px;
-  font-size: 22px;
+.clubs {
+  background-image: url("images/footbal_clubs/uefa.jfif");
 }
 
-/*media queries /*/
+.liverpool {
+  background-image: url("images/footbal_clubs/barclay's.jfif");
+}
 
-@media (max-width: 991px) {
-  html {
-    font-size: 55%;
-  }
-  header {
-    padding: 1rem 2rem;
-  }
+.bavaria {
+  background-image: url("images/footbal_clubs/bundesliga.png");
+}
 
-  section {
-    padding: 2rem;
-  }
+.juve {
+  background-image: url("images/footbal_clubs/seria_a.jfif");
+}
+
+.real {
+  background-image: url("images/footbal_clubs/laliga1.jfif");
+}
+
+.ol {
+  background-image: url("images/footbal_clubs/ligue_1.jfif");
 }
 
 @media (max-width: 768px) {
-  header .icons #menu-bars {
-    display: inline-block;
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
   }
 
-  header .navbar {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: #fff;
-    border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
-    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
-    padding: 1rem;
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  .mainHeader {
+    text-align: center;
   }
 
-  header .navbar.active {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  .asideBlock {
+    margin: 20px 0;
   }
 
-  header .navbar a {
-    display: block;
-    padding: 1.5rem;
-    margin: 1rem;
-    font-size: 2rem;
-    background: #eee;
+  .mainBlock {
+    width: 100%;
   }
 
-  #search-form #search-box {
+  .mainContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .mainDescr {
+    border: 1px solid black;
+    width: 76vw;
+    word-break: break-all;
+    margin: 20px 0;
+    padding: 7px;
+    word-break: keep-all;
+  }
+
+  .mainSource {
+    margin-top: 20px;
     width: 90%;
-    margin: 0 1rem;
   }
 }
 
-@media (max-width: 991px) {
-  html {
-    font-size: 50%;
+@media (min-width: 768px) and (max-width: 1259px) {
+  .content {
+    height: auto;
+  }
+
+  .mainBlock {
+    width: 90%;
+    height: 100%;
+  }
+
+  .iFrame {
+    height: 480px;
+  }
+
+  .mainContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .iFrame {
+    height: 800px;
+  }
+
+  .mainDescr {
+    margin: 10px 5px;
+    padding: 10px;
+    width: 36vw;
+  }
+}
+
+@media (min-width: 1260px) and (max-width: 2524px) {
+  .content {
+    height: 100%;
+  }
+
+  .mainBlock {
+    width: 90%;
+    height: 100%;
+  }
+
+  .iFrame {
+    height: 850px;
+  }
+
+  .mainContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .mainDescr {
+    margin: 10px 5px;
+    padding: 10px;
+    width: 36vw;
   }
 }
